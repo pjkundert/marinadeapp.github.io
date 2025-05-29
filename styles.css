@@ -48,7 +48,7 @@
 
 .privacy-table th {
   background-color: #f5f8ff;
-  color: #2563eb;
+  color: var(--primary-color);
   font-weight: 600;
   font-size: 1.1em;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
 
 .privacy-table td strong {
   display: block;
-  color: #2563eb;
+  color: var(--primary-color);
   margin-bottom: 0.5em;
 }
 
@@ -94,7 +94,7 @@
   font-weight: 600;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
-  color: #2563eb;
+  color: var(--primary-color);
 }
 
 /* Responsive styles for the table */
@@ -113,7 +113,7 @@ body {
   margin: 0; 
   padding: 0; 
   background: #f8fafc; 
-  color: #222; 
+  color: var(--text-color); 
 }
 
 /* Static header styles */
@@ -123,7 +123,7 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: var(--header-shadow);
   z-index: 1000;
 }
 
@@ -145,7 +145,7 @@ nav {
 }
 
 nav a {
-  color: #2563eb;
+  color: var(--primary-color);
   text-decoration: none;
   margin-left: 1em;
   display: inline-block;
@@ -158,12 +158,23 @@ nav a {
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5em;
-  color: #2563eb;
+  color: var(--primary-color);
 }
 
 /* Main content styles with padding for fixed header */
 main {
   padding-top: 70px; /* Height of header + some extra space */
+}
+
+/* Privacy policy specific text styling */
+main.privacy h1 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.privacy-table p, 
+.privacy-table li {
+  color: var(--primary-color);
 }
 
 /* Privacy policy specific styles */
@@ -179,7 +190,7 @@ main.privacy {
 /* Hero section styles */
 .hero {
   padding: 2em 1em;
-  background: #f6fafe;
+  background: var(--light-bg);
 }
 
 /* For larger screens, use flex layout to position image and text side by side */
@@ -235,7 +246,7 @@ main.privacy {
 
 .cta-btn {
   display: inline-block;
-  background: #2563eb;
+  background: var(--primary-color);
   color: #fff;
   padding: 0.75em 2em;
   border-radius: 4px;
