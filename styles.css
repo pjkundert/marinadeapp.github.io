@@ -1,0 +1,293 @@
+/* Global styles for Marinade App */
+:root {
+  --primary-color: #004E9D; /* Main blue color */
+  --accent-color: #b7151c;  /* Red color for accents */
+  --light-bg: #f6fafe;      /* Light background color */
+  --text-color: #222;       /* Default text color */
+  --header-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Typography classes */
+.font_2 {
+  color: var(--primary-color);
+  font-family: Arial, sans-serif;
+  font-size: 2.5em;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.color_23 {
+  color: var(--accent-color);
+}
+
+/* Fix for wixui specific classes */
+.wixui-rich-text__text {
+  display: inline-block;
+}
+
+/* Privacy Policy Table Styles */
+.privacy-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.privacy-table th,
+.privacy-table td {
+  padding: 1em;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e1e5eb;
+}
+
+.privacy-table th {
+  background-color: #f5f8ff;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.privacy-table tr:last-child td {
+  border-bottom: none;
+}
+
+.privacy-table td strong {
+  display: block;
+  color: #2563eb;
+  margin-bottom: 0.5em;
+}
+
+.privacy-table tbody tr:hover {
+  background-color: #f9fafd;
+}
+
+.privacy-table td:first-child {
+  width: 25%;
+  background-color: #f9fafd;
+}
+
+.privacy-table ul {
+  margin: 0.5em 0 0.5em 1.5em;
+  padding: 0;
+}
+
+.privacy-table li {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.privacy-table p {
+  margin: 0.7em 0;
+  line-height: 1.5;
+}
+
+.privacy-table i {
+  display: block;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: #2563eb;
+}
+
+/* Responsive styles for the table */
+@media (max-width: 768px) {
+  .privacy-table th,
+  .privacy-table td {
+    padding: 0.8em;
+  }
+  
+  .privacy-table td:first-child {
+    width: 35%;
+  }
+}
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background: #f8fafc; 
+  color: #222; 
+}
+
+/* Static header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header-img { 
+  height: 60px;
+  object-fit: contain;
+  padding: 5px 15px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation styles */
+nav {
+  padding: 0 1em;
+}
+
+nav a {
+  color: #2563eb;
+  text-decoration: none;
+  margin-left: 1em;
+  display: inline-block;
+  padding: 0.5em 0;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5em;
+  color: #2563eb;
+}
+
+/* Main content styles with padding for fixed header */
+main {
+  padding-top: 70px; /* Height of header + some extra space */
+}
+
+/* Privacy policy specific styles */
+main.privacy {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 70px 1em 2em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section styles */
+.hero {
+  padding: 2em 1em;
+  background: #f6fafe;
+}
+
+/* For larger screens, use flex layout to position image and text side by side */
+@media (min-width: 769px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse; /* Image on left, text on right */
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    text-align: left;
+  }
+  
+  .hero img {
+    flex: 0 0 auto;
+    max-width: 350px;
+    margin-bottom: 0;
+  }
+  
+  .hero-content {
+    flex: 1 1 auto;
+    max-width: 500px;
+  }
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+  
+  .hero img {
+    margin-bottom: 1em;
+  }
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.hero h1 {
+  margin: 0.5em 0;
+  font-size: 2em;
+}
+
+.hero p {
+  margin: 0.5em 0 1.5em 0;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1 { 
+  margin-top: 0; 
+}
+
+footer { 
+  text-align: center; 
+  padding: 2em 1em; 
+  color: #888; 
+  font-size: 0.95em; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-links.active {
+    max-height: 200px;
+  }
+  
+  nav a {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  main.privacy {
+    margin: 1em;
+    padding: 70px 1em 1em;
+  }
+}
