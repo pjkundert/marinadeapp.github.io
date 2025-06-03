@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Marinade App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="marinade-favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-page">
+  <header>
+    <div class="header-container">
+      <img src="marinade.avif" alt="Marinade Header" class="header-img">
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Marinade</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact-us.html">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="content">
+    <h1>Contact Us</h1>
+    <p>
+      If you have any questions about the Altar app, we’re here to assist you. Feel free to reach
+      out — we’ll respond within 24 hours. You can contact us via:
+    </p>
+    <p>
+      Email: feedback@oilpatchpulpit.com
+      <br>Phone: 780 898 2210
+      <br>Address: PO Box 7193, Drayton Valley, AB, T7A 1S4 Canada
+    </p>
+  </main>
+  <footer>
+    &copy; 2025 Marinade App. All rights reserved.
+  </footer>
+  
+  <script>
+    // Hamburger menu functionality
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+

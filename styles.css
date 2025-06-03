@@ -100,7 +100,7 @@
 /* Responsive styles for the table */
 @media (max-width: 768px) {
   /* Privacy policy page responsive adjustments */
-  main.privacy {
+  main.content {
     padding: 80px 1em 2em;
   }
   
@@ -152,7 +152,7 @@ body {
 }
 
 /* Privacy policy page specific body background */
-body.privacy-page {
+body.content-page {
   background: var(--light-bg);
 }
 
@@ -190,6 +190,11 @@ nav a {
   margin-left: 1em;
   display: inline-block;
   padding: 0.5em 0;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
 }
 
 /* Hamburger menu styles */
@@ -204,32 +209,36 @@ nav a {
 /* Main content styles with padding for fixed header */
 main {
   padding-top: 70px; /* Height of header + some extra space */
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 /* Privacy policy specific text styling */
-main.privacy h1 {
+main.content h1 {
   color: var(--primary-color);
   margin-bottom: 1em;
 }
 
-.privacy-table p, 
-.privacy-table li {
+main.content {
   color: var(--primary-color);
-}
-
-/* Privacy policy specific styles */
-main.privacy {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 90px 2em 3em;
+  padding: 90px 0 3em;
   /* No background color needed since the body has it */
   /* No border-radius or box-shadow needed */
 }
 
+/* Content div styling */
+div.content {
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
 /* Hero section styles */
 .hero {
-  padding: 2em 1em;
+  padding: 2em 0;
   background: var(--light-bg);
+  width: 100%;
 }
 
 /* For larger screens, use flex layout to position image and text side by side */
@@ -336,8 +345,14 @@ footer {
     border-bottom: 1px solid #f1f5f9;
   }
   
-  main.privacy {
-    margin: 1em;
-    padding: 70px 1em 1em;
+  main {
+    padding-top: 70px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  main.content {
+    padding-top: 70px;
+    padding-bottom: 1em;
   }
 }
